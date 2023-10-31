@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <template id="li_template">
+      <li>
+        <a class="link">
+          <h3 class="title">Zennへアクセスする</h3>
+          <p class="pathname">https://zenn.dev/</p>
+        </a>
+      </li>
+    </template>
+
+    <div class="groupContainer">
+      <h1 class="mainTitle">コンテンツ一覧</h1>
+      <button id="groupBtn">グループ化</button>
+    </div>
+    <div class="docContainer">
+      <ul></ul>
+    </div>
+
+    <script src="./popup.js" type="module"></script>
+  </body>
+</html>

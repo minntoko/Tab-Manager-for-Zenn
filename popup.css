@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --c-gray-300: #edf2f7;
+  --c-gray-400: #e4edf4;
+  --c-blue-300: #e0efff;
+  --c-blue-400: #bfdcff;
+  --c-blue-200: #ecf5ff;
+  --c-blue-500: #3ea8ff;
+  --c-blue-600: #0f83fd;
+  --c-general-primary: var(--c-blue-500);
+  --c-button-primary: var(--c-blue-500);
+  --c-button-primary-hover: var(--c-blue-600);
+  --c-bg-neutral: var(--c-gray-300);
+  --c-bg-primary: var(--c-blue-300);
+  --c-bg-primary-lighter: var(--c-blue-200);
+  --c-neutral-border-lighter: var(--c-gray-400);
+  --c-focus-shadow: var(--c-blue-400);
+}
+
+body {
+  width: 21rem;
+  background-color: var(--c-bg-neutral);
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0.25rem;
+}
+li:nth-child(odd) {
+  background: #ffffff;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+li:nth-child(even) {
+  background-color: var(--c-bg-primary-lighter);
+  transition: all .2s;
+  cursor: pointer;
+}
+
+li:nth-child(odd):hover,
+li:nth-child(even):hover {
+  background-color: var(--c-blue-400);
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.groupContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  background-color: white;
+  border-bottom: 1px solid var(--c-neutral-border-lighter);
+  padding: 8px;
+}
+
+.docContainer {
+  max-height: 400px;
+  overflow-y: scroll;
+  background-color: white;
+  box-shadow: 0 0 4px #ccc;
+  padding: .5em;
+  margin: 8px;
+  border-radius: .5em;
+}
+
+.mainTitle {
+  font-size: 1.8em;
+  border-bottom: solid 3px var(--c-focus-shadow);
+  position: relative;
+}
+.mainTitle:before {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px var(--c-button-primary-hover);
+  bottom: -3px;
+  width: 20%;
+}
+
+#groupBtn {
+  height: 34px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--c-button-primary);
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0.5em;
+  transition: all .2s;
+}
+
+#groupBtn:hover {
+  background-color: var(--c-button-primary-hover);
+}
